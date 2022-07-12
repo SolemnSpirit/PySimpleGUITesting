@@ -43,7 +43,6 @@ def make_window1():
 # Action section
                      [sg.Push(), sg.Text(Section_text_lead,  text_color = text_colour_light, font = (new_font, 24)), sg.Text(Section_3_heading, text_color = text_colour_light, font = (new_font, 18)), sg.Text(Section_text_tail, text_color = text_colour_light, font = (new_font, 24)), sg.Push()],
                      [sg.Push(), sg.Text(approved_btn, justification = 'left', key = 'btn_approved', font = (new_font, 16), text_color = text_colour_light, enable_events = True), sg.Text(denied_btn, justification = 'right', key = 'btn_denied', font = (new_font, 16), text_color = text_colour_light, enable_events = True), sg.Push()],
-                     [sg.Push(), sg.Button(approved_btn, font = (new_font, 16), button_color = ('white', background_colour_gold), mouseover_colors = ('black', btn_colour_approved), key = 'btn_test', size=(12,1)) , sg.Button(denied_btn, font = (new_font, 16), button_color = ('white', background_colour_gold), mouseover_colors = ('black', btn_colour_denied), key ='btn_test2', size = (12,1)), sg.Push()],                     
                      [sg.Push(), sg.Text(section_footer, text_color = text_colour_dark, font = (Arstfontzka_text, 14)), sg.Push()]
                      ]),
             sg.VerticalSeparator(),
@@ -53,7 +52,7 @@ def make_window1():
                       ], expand_y=True)],
          [sg.Push(), sg.Text("", font = (new_font, 6)), sg.Push()],
          [sg.Push(), sg.Image('Assets/Images/property_label_straight.png', enable_events = True, key = 'property'), sg.Push()],
-         [sg.Button('Go', key='Testes'), sg.Button('Exit')],
+         [sg.Button('Exit')],
          [sg.Push(), sg.Text("", font = (new_font, 6)), sg.Push()]         
          ]
 
@@ -92,6 +91,9 @@ while True:
     row_number = 2 # starting number for added rows
 
     if window == window1 and event in (sg.WIN_CLOSED, 'Exit'):
+        break
+
+    if window == window1 and event in (sg.WIN_CLOSED, 'btn_quit'):
         break
 
     if window == window1:

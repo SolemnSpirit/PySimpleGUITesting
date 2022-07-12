@@ -48,7 +48,7 @@ left_column = sg.Column([
 # Action section
                      [sg.Push(), sg.Text(Section_text_lead,  text_color = text_colour_light, font = (new_font, 24)), sg.Text(Section_3_heading, text_color = text_colour_light, font = (new_font, 18)), sg.Text(Section_text_tail, text_color = text_colour_light, font = (new_font, 24)), sg.Push()],
                      [sg.Push(), sg.Text(approved_btn, justification = 'left', key = 'btn_approved', font = (new_font, 16), text_color = text_colour_light, enable_events = True), sg.Text(denied_btn, justification = 'right', key = 'btn_denied', font = (new_font, 16), text_color = text_colour_light, enable_events = True), sg.Push()],
-                     [sg.Push(), sg.Button(approved_btn, font = (new_font, 16), button_color = ('white', background_colour_gold), mouseover_colors = ('black', btn_colour_approved), key = 'btn_test', size=(12,1)) , sg.Button(denied_btn, font = (new_font, 16), button_color = ('white', background_colour_gold), mouseover_colors = ('black', btn_colour_denied), key ='btn_test2', size = (12,1)), sg.Push()],                     
+                     #[sg.Push(), sg.Button(approved_btn, font = (new_font, 16), button_color = ('white', background_colour_gold), mouseover_colors = ('black', btn_colour_approved), key = 'btn_test', size=(12,1)) , sg.Button(denied_btn, font = (new_font, 16), button_color = ('white', background_colour_gold), mouseover_colors = ('black', btn_colour_denied), key ='btn_test2', size = (12,1)), sg.Push()],                     
                      [sg.Push(), sg.Text(section_footer, text_color = text_colour_dark, font = (Arstfontzka_text, 14)), sg.Push()]
                      ])
 
